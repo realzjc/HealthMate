@@ -1,4 +1,4 @@
-# 🩺 HealthPilot: Your AI-Powered Wellness Companion 🚀
+# 🩺 HealthMate: Your AI-Powered Wellness Companion 🚀
 
 <p align="center">
   <img src="./public/logo_light.png" alt="HealthPilot Logo" width="150"/>
@@ -147,12 +147,12 @@ Project Link: https://healthpilot-ebb2fue5ewbegcgv.eastus2-01.azurewebsites.net
 * **Calendar Integration:** Implement direct calendar event creation (using `.ics` generation or potentially MS Graph/Google Calendar API).
 * **More Modalities:** Explore image analysis (e.g., food logging) or voice input.
 
-## 🙏 Acknowledgements
+<!-- ## 🙏 Acknowledgements
 
 * The [Semantic Kernel](https://github.com/microsoft/semantic-kernel) team for the powerful orchestration framework.
 * The [Chainlit](https://chainlit.io/) team for the awesome chat UI library.
-* Azure AI and OpenAI for the cutting-edge AI models.
+* Azure AI and OpenAI for the cutting-edge AI models. -->
 
-## Team
+<!-- ## Team
 - **Yushuhong Lin** ([ylin766](https://github.com/ylin766))
-- **Akhil Deshneni** ([deshneni-akhil](https://github.com/deshneni-akhil))
+- **Akhil Deshneni** ([deshneni-akhil](https://github.com/deshneni-akhil)) -->
