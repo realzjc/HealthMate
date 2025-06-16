@@ -4,9 +4,9 @@
   <img src="./public/logo_light.png" alt="HealthPilot Logo" width="150"/>
 </p>
 
-**Your personal health assistant available 24/7, ready to guide you on fitness, nutrition, and mental well-being. That's HealthMate!** 
+**HealthMate**: An intelligent multi-agent system designed to provide holistic health advice, personalized plans, and helpful resources, all through a friendly chat interface.
 
-An intelligent multi-agent system designed to provide holistic health advice, personalized plans, and helpful resources, all through a friendly chat interface.
+**Your personal health assistant available 24/7, ready to guide you on fitness, nutrition, and mental well-bein**.
 <!-- 
 Whether you're looking to get fit, eat healthier, or manage stress, HealthMate acts as your knowledgeable guide, orchestrating specialized AI agents to deliver the best possible support. -->
 
