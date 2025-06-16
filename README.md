@@ -1,12 +1,14 @@
-# 🩺 HealthMate: Your AI-Powered Wellness Companion 🚀
+# 🩺 HealthMate: AI-Powered Wellness Companion 🚀
 
 <p align="center">
   <img src="./public/logo_light.png" alt="HealthPilot Logo" width="150"/>
 </p>
 
-**Imagine having a personal health assistant available 24/7, ready to guide you on fitness, nutrition, and mental well-being. That's HealthPilot!** We've built an intelligent multi-agent system designed to provide holistic health advice, personalized plans, and helpful resources, all through a friendly chat interface.
+**Imagine having a personal health assistant available 24/7, ready to guide you on fitness, nutrition, and mental well-being. That's HealthMate!** 
 
-Whether you're looking to get fit, eat healthier, or manage stress, HealthPilot acts as your knowledgeable guide, orchestrating specialized AI agents to deliver the best possible support.
+We've built an intelligent multi-agent system designed to provide holistic health advice, personalized plans, and helpful resources, all through a friendly chat interface.
+
+Whether you're looking to get fit, eat healthier, or manage stress, HealthMate acts as your knowledgeable guide, orchestrating specialized AI agents to deliver the best possible support.
 
 ## ✨ Features
 
