@@ -163,9 +163,9 @@ Specialist agents utilize their unique instructions and dedicated plugins (like 
 
 3.  **Start Chatting!** Use the starter prompts or ask your own health-related questions.
 
-## ☁️ Deployment
+<!-- ## ☁️ Demo -->
 
-Refer the below link to test the application:
+<!-- Refer the below link to test the application: -->
 <!-- 
 Project Link: https://HealthMate-ebb2fue5ewbegcgv.eastus2-01.azurewebsites.net -->
 
