@@ -5,9 +5,9 @@
   <img src="./public/logo_light.png" alt="HealthMate Logo" width="150"/>
 </p>
 
-**HealthMate**: An intelligent multi-agent system designed to provide holistic health advice, personalized plans, and helpful resources, all through a friendly chat interface.
+**HealthMate**: Your personal health assistant available 24/7, ready to guide you on fitness, nutrition, and mental well-being !!
 
-**Your personal health assistant available 24/7, ready to guide you on fitness, nutrition, and mental well-being !!**.
+An intelligent multi-agent system designed to provide holistic health advice, personalized plans, and helpful resources, all through a friendly chat interface.
 <!-- 
 Whether you're looking to get fit, eat healthier, or manage stress, HealthMate acts as your knowledgeable guide, orchestrating specialized AI agents to deliver the best possible support. -->
 
@@ -65,7 +65,10 @@ Specialist agents utilize their unique instructions and dedicated plugins (like 
 * **Azure OpenAI Service:** Provides the underlying LLMs
 * **Plugins:** Modular components (`.py` files in `/plugins`) that give agents specific skills (web scraping, database access, API calls, etc.).
 
-## 🛠️ Tech Stack
+
+## 🚀 Getting Started
+
+### 🛠️ Tech Stack
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Semantic Kernel](https://img.shields.io/badge/Semantic%20Kernel-Microsoft-orange?style=for-the-badge)
@@ -75,10 +78,6 @@ Specialist agents utilize their unique instructions and dedicated plugins (like 
 ![SQLite](https://img.shields.io/badge/SQLite-Database-blue?style=for-the-badge&logo=sqlite&logoColor=white)
 ![Pytube](https://img.shields.io/badge/Pytube-YouTube-red?style=for-the-badge&logo=youtube)
 ![dotenv](https://img.shields.io/badge/dotenv-Config-yellow?style=for-the-badge)
-
-## 🚀 Getting Started
-
-Let's get HealthMate running on your local machine!
 
 ### Prerequisites
 
