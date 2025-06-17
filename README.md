@@ -2,7 +2,7 @@
 <!-- 🚀 -->
 
 <p align="center">
-  <img src="./public/logo_light.png" alt="HealthPilot Logo" width="150"/>
+  <img src="./public/logo_light.png" alt="HealthMate Logo" width="150"/>
 </p>
 
 **HealthMate**: An intelligent multi-agent system designed to provide holistic health advice, personalized plans, and helpful resources, all through a friendly chat interface.
@@ -33,11 +33,11 @@ Whether you're looking to get fit, eat healthier, or manage stress, HealthMate a
 
 ## 🏗️ Architecture
 
-HealthPilot employs a multi-agent architecture coordinated by Semantic Kernel. The user interacts with the Chainlit UI, sending messages to the central `HealthManager` agent. The `HealthManager` analyzes the request and routes it to the appropriate specialist agent (`Fitness`, `Nutrition`, or `MentalCare`). Specialist agents utilize their unique instructions and dedicated plugins (like web scraping, database queries, or music search) to fulfill the request, returning the information to the `HealthManager` and then back to the user via the Chainlit UI.
+HealthMate employs a multi-agent architecture coordinated by Semantic Kernel. The user interacts with the Chainlit UI, sending messages to the central `HealthManager` agent. The `HealthManager` analyzes the request and routes it to the appropriate specialist agent (`Fitness`, `Nutrition`, or `MentalCare`). Specialist agents utilize their unique instructions and dedicated plugins (like web scraping, database queries, or music search) to fulfill the request, returning the information to the `HealthManager` and then back to the user via the Chainlit UI.
 
 <p align="center">
-  <img src="./architecture.jpg" alt="HealthPilot Architecture Diagram" width="80%"/>
-  <br/><em>Figure 1: HealthPilot System Architecture</em>
+  <img src="./architecture.jpg" alt="HealthMate Architecture Diagram" width="80%"/>
+  <br/><em>Figure 1: HealthMate System Architecture</em>
 </p>
 
 [Find more on project deepwiki](https://deepwiki.com/realzjc/HealthMate)
@@ -63,7 +63,7 @@ HealthPilot employs a multi-agent architecture coordinated by Semantic Kernel. T
 
 ## 🚀 Getting Started
 
-Let's get HealthPilot running on your local machine!
+Let's get HealthMate running on your local machine!
 
 ### Prerequisites
 
@@ -132,7 +132,7 @@ Let's get HealthPilot running on your local machine!
     ```
     *(The `-w` flag enables auto-reloading during development)*
 
-2.  **Access HealthPilot:**
+2.  **Access HealthMate:**
     * Open your browser and navigate to `http://localhost:8000` (or the port specified by Chainlit).
     * Log in using the simple credentials defined in `app.py` (default: `admin`/`123`) if prompted.
 
@@ -141,8 +141,8 @@ Let's get HealthPilot running on your local machine!
 ## ☁️ Deployment
 
 Refer the below link to test the application:
-
-Project Link: https://healthpilot-ebb2fue5ewbegcgv.eastus2-01.azurewebsites.net
+<!-- 
+Project Link: https://HealthMate-ebb2fue5ewbegcgv.eastus2-01.azurewebsites.net -->
 
 <!-- ## 💡 Future Improvements
 
