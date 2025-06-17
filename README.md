@@ -1,4 +1,5 @@
-# 🩺 HealthMate: AI-Powered Wellness Companion 🚀
+# HealthMate: AI-Powered Wellness Companion 🩺
+<!-- 🚀 -->
 
 <p align="center">
   <img src="./public/logo_light.png" alt="HealthPilot Logo" width="150"/>
@@ -6,7 +7,7 @@
 
 **HealthMate**: An intelligent multi-agent system designed to provide holistic health advice, personalized plans, and helpful resources, all through a friendly chat interface.
 
-**Your personal health assistant available 24/7, ready to guide you on fitness, nutrition, and mental well-bein**.
+**Your personal health assistant available 24/7, ready to guide you on fitness, nutrition, and mental well-being !!**.
 <!-- 
 Whether you're looking to get fit, eat healthier, or manage stress, HealthMate acts as your knowledgeable guide, orchestrating specialized AI agents to deliver the best possible support. -->
 
@@ -23,7 +24,7 @@ Whether you're looking to get fit, eat healthier, or manage stress, HealthMate a
     * Search and extract recipes (`NutritionPlugin` using Playwright).
     * Find relevant music on YouTube (`MentalCarePlugin` using Pytube).
     * Send email summaries or confirmations (`SmtpPlugin` using Gmail).
-    * *(Optional: Add ICS Calendar generation if implemented)*
+    <!-- * *(Optional: Add ICS Calendar generation if implemented)* -->
 * **Azure Powered:** Utilizes Azure OpenAI (GPT-4o, GPT-4o-mini) and Azure AI Agents for robust AI capabilities and agent orchestration.
 * **RAG-Powered Responses:** Each agent is enhanced with **retrieval-augmented generation (RAG)** using the **Knowledge feature** in Azure AI Foundry's Agent Service — enabling more accurate, grounded, and domain-specific answers.
 
@@ -38,6 +39,8 @@ HealthPilot employs a multi-agent architecture coordinated by Semantic Kernel. T
   <img src="./architecture.jpg" alt="HealthPilot Architecture Diagram" width="80%"/>
   <br/><em>Figure 1: HealthPilot System Architecture</em>
 </p>
+
+[Find more on project deepwiki](https://deepwiki.com/realzjc/HealthMate)
 
 **Core Components:**
 
@@ -141,13 +144,13 @@ Refer the below link to test the application:
 
 Project Link: https://healthpilot-ebb2fue5ewbegcgv.eastus2-01.azurewebsites.net
 
-## 💡 Future Improvements
+<!-- ## 💡 Future Improvements
 
 * **Persistent & Scalable Storage:** Replace SQLite with a cloud database (e.g., Azure SQL, Cosmos DB) for user profiles.
 * **Enhanced Personalization:** Track progress, preferences, and provide proactive recommendations.
 * **Wearable Integration:** Connect with fitness trackers or health APIs.
 * **Calendar Integration:** Implement direct calendar event creation (using `.ics` generation or potentially MS Graph/Google Calendar API).
-* **More Modalities:** Explore image analysis (e.g., food logging) or voice input.
+* **More Modalities:** Explore image analysis (e.g., food logging) or voice input. -->
 
 <!-- ## 🙏 Acknowledgements
 

@@ -3,6 +3,7 @@ import chainlit as cl
 import json
 from pytube import Search
 
+# youtube video + music 
 class MentalCarePlugin:
     def youtube_search(self, search_terms):
         s = Search(search_terms)

@@ -16,6 +16,7 @@ def auth_callback(username: str, password: str):
         return cl.User(identifier="admin", metadata={"role": "admin", "provider": "credentials"})
     return None
 
+
 @cl.on_chat_start
 async def on_chat_start():
     global health_manager
@@ -45,6 +46,7 @@ async def on_chat_start():
         (fitness_thread, fitness_client, fitness_creds),
         (mentalcare_thread, mentalcare_client, mentalcare_creds)
     ])
+    # 注册 threads 到用户 session 中，以便在 on_chat_end 中关闭
 
     health_manager = await create_health_manager(
         kernel,
@@ -76,17 +78,23 @@ async def on_message(message: cl.Message):
     
     async for msg in health_manager.invoke(messages=structured_prompt):
         content = msg.message.content
-
+        # content是llm回复的内容
         chat_history.add_user_message(message.content)
         chat_history.add_assistant_message(content)
 
         await cl.Message(content=content, author="HealthManager").send()
+        # 发送到前端
 
         agent_runs = cl.user_session.get("agent_runs")
         for agent_name, data in agent_runs.items():
             run_id = getattr(data["thread"], "last_run_id", None)
             if run_id:
                 data["run_id"] = run_id
+
+        # 管理 agent 的运行状态：
+        # 获取用户 session 中存储的所有 agent 运行数据（agent_runs）。
+        # 对每个 Agent，如果它有有效的 last_run_id（通常表示某次任务运行的 ID），则更新 run_id。
+        # 这便于之后暂停、取消、追踪等操作。
 
 async def cancel_active_runs():
     agent_runs = cl.user_session.get("agent_runs")

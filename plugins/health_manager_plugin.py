@@ -23,6 +23,7 @@ class HealthManagerPlugin:
         agent, thread = self.agents[agent_key]
         agent_name = agent_key.capitalize() + " Agent"
 
+        # 在链式调用中显示正在咨询的 agent 名称
         async with cl.Step(name=f"Consulting {agent_name}", type="tool"):
             response = await agent.get_response(messages=message, thread=thread)
             content = response.message.content if hasattr(response, "message") else str(response)
@@ -71,6 +72,7 @@ class HealthManagerPlugin:
 
         except Exception:
             await cl.Message(content=content, author=agent_name).send()
+        # 按照不同类型 调用chainlit的组件
 
     @kernel_function(name="route_to_fitness", description="Route a fitness-related task.")
     async def route_to_fitness(self, message: str) -> str:

@@ -6,6 +6,9 @@ import json
 import re
 import chainlit as cl
 
+# 1. 简单问题直接回答
+# 2. 3. 获取肌肉名称，性别，如果有的话，从写定好的网站上，抓取视频
+
 class FitnessPlugin:
 
     @kernel_function(
@@ -62,11 +65,13 @@ class FitnessPlugin:
             "muscle": muscle,
             "exercises": exercises
         })
+        # 整理对应的格式
 
     async def scrape_video_urls(self, url: str) -> list[str]:
         async with async_playwright() as p:
             browser = await p.chromium.launch(
-                headless=True,
+                # headless=True,
+                headless=False,
                 args=[
                     "--window-position=100,100",
                     "--window-size=1200,800"
@@ -75,12 +80,18 @@ class FitnessPlugin:
             page = await browser.new_page()
             await page.goto(url, timeout=60000)
             await page.wait_for_load_state("networkidle")
+            # 使用 networkidle 等待所有网络请求结束（类似于页面“完全加载完”）
 
             seen_sources = set()
             scroll_step = 500
             max_scrolls = 8
             no_new_count = 0
             max_no_new = 2
+            # seen_sources = set()    # 存储已抓取的唯一 src 链接
+            # scroll_step = 500       # 每次向下滚动 500px
+            # max_scrolls = 8         # 最多滚动 8 次
+            # no_new_count = 0        # 连续几次未发现新视频
+            # max_no_new = 2          # 最多允许 2 次无新资源就停止
 
             for _ in range(max_scrolls):
                 video_elems = await page.query_selector_all("video")
@@ -100,6 +111,7 @@ class FitnessPlugin:
                         break
                 else:
                     no_new_count = 0
+                # 如果连续 2 次未找到新视频，就提前退出循环（节省资源）
 
                 await page.evaluate(f"window.scrollBy(0, {scroll_step})")
                 await asyncio.sleep(0.3)
@@ -107,6 +119,7 @@ class FitnessPlugin:
             await browser.close()
             return list(seen_sources)
 
+    # 注册为kernel function，供llm调用，给出对应格式
     @kernel_function(
         name="get_format",
         description="Return the JSON output format"

@@ -13,6 +13,8 @@ async def create_fitness_agent():
     fitness_plugin = FitnessPlugin()
     query_plugin = UserProfileQueryPlugin()
     agent_definition = await client.agents.get_agent(agent_id=AGENT_ID)
+    # 这里用的不是create_agent，而是Get，因为已手动在Azure AI Foundry中创建了agent
+
     agent = AzureAIAgent(client=client, definition=agent_definition, plugins=[fitness_plugin, query_plugin])
     return agent, client, creds
 """

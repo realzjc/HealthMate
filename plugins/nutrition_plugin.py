@@ -11,6 +11,7 @@ class NutritionPlugin:
         name="fetch_recipe_urls_by_keyword",
         description="Search for recipe URLs from allrecipes.com using a keyword."
     )
+    # 通过关键词，找url
     async def fetch_recipe_urls_by_keyword(self, keyword: str) -> List[str]:
         url = f"https://www.allrecipes.com/search?q={keyword}"
         print(f"🔍 Searching recipes for keyword: {keyword}")
@@ -20,7 +21,7 @@ class NutritionPlugin:
             pass
 
         async with async_playwright() as p:
-            browser = await p.chromium.launch(headless=True)
+            browser = await p.chromium.launch(headless=False)
             page = await browser.new_page()
             await page.goto(url)
             await page.wait_for_load_state("domcontentloaded")
@@ -30,6 +31,7 @@ class NutritionPlugin:
                 await page.evaluate("window.scrollBy(0, 500)")
                 await asyncio.sleep(0.5)
 
+            # 抓取所有搜索结果列表项 <a>，并提取链接
             anchors = await page.query_selector_all("a.mntl-card-list-card--extendable")
             for a in anchors:
                 href = await a.get_attribute("href")
@@ -62,7 +64,7 @@ class NutritionPlugin:
 
             render = []
 
-            # Extract title
+            # 1. Extract title
             title = "Untitled Recipe"
             for selector in ["h1.article-heading", "h1.headline.heading-content", "h1.headline"]:
                 try:
@@ -82,7 +84,7 @@ class NutritionPlugin:
                 }
             })
 
-            # Extract ingredients
+            # 2. Extract ingredients
             ingredients = []
             items = await page.query_selector_all("li.mm-recipes-structured-ingredients__list-item")
             for item in items:
@@ -99,7 +101,7 @@ class NutritionPlugin:
                     }
                 })
 
-            # Extract preparation steps with images
+            # 3.Extract preparation steps with images
             step_blocks = await page.query_selector_all("li.comp.mntl-sc-block-startgroup")
             for idx, li in enumerate(step_blocks):
                 step_note = ""
@@ -123,7 +125,7 @@ class NutritionPlugin:
                         }
                     })
 
-            # Extract nutrition information
+            # 4. Extract nutrition information
             nutrition_lines = []
             rows = await page.query_selector_all("table.mm-recipes-nutrition-facts-summary__table tr")
             for row in rows:
