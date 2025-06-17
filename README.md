@@ -143,6 +143,10 @@ Specialist agents utilize their unique instructions and dedicated plugins (like 
         APP_PASSWORD="your_16_character_gmail_app_password"
         CHAINLIT_AUTH_SECRET="your_generated_chainlit_secret" 
         # Generate using: chainlit create-secret
+
+        AZURE_AI_AGENT_ENDPOINT="your_azure_ai_project_string"
+        AZURE_AI_AGENT_MODEL_DEPLOYMENT_NAME="your_model_version"
+        AZURE_AI_AGENT_API_VERSION="your_api_version"  
         ```
 
 ### Running the Application
