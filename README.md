@@ -21,25 +21,33 @@ Whether you're looking to get fit, eat healthier, or manage stress, HealthMate a
 * **Interactive UI:** 
     Built with Chainlit for a seamless and engaging chat experience, including custom UI elements for recipes and exercise videos.
 * **Personalization:** 
-    Remembers user profile details (age, gender, height, weight) using a local SQLite database to tailor advice.
+    Remembers user profile details (age, gender, height, weight) using a local SQLite database.
 * **External Tool Integration:** 
     Leverages Semantic Kernel plugins to:
-    * Scrape websites for fitness videos (`FitnessPlugin` using Playwright).
-    * Search and extract recipes (`NutritionPlugin` using Playwright).
-    * Find relevant music on YouTube (`MentalCarePlugin` using Pytube).
-    * Send email summaries or confirmations (`SmtpPlugin` using Gmail).
+    * `FitnessPlugin`: Scrape websites for fitness videos.
+    * `NutritionPlugin`: Search and extract recipes.
+    * `MentalCarePlugin`: Find relevant music on YouTube.
+    * `SmtpPlugin`: Send email summaries or confirmations.
+    <!-- using Playwright)
+    using Playwright)
+    using Pytube)
+    using Gmail) -->
     <!-- * *(Optional: Add ICS Calendar generation if implemented)* -->
 * **Azure Powered:** 
     Utilizes Azure OpenAI and Azure AI Agents for robust AI capabilities and agent orchestration.
 * **RAG-Powered Responses:** 
-    Each agent is enhanced with **retrieval-augmented generation (RAG)** using the **Knowledge feature** in Azure AI Foundry's Agent Service — enabling more accurate, grounded, and domain-specific answers.
+    Each agent is enhanced with **retrieval-augmented generation (RAG)** using the **Knowledge feature** in Azure AI Foundry's — enabling more accurate, grounded, and domain-specific answers.
 
 
 ---
 
 ## 🏗️ Architecture
 
-HealthMate employs a multi-agent architecture coordinated by Semantic Kernel. The user interacts with the Chainlit UI, sending messages to the central `HealthManager` agent. The `HealthManager` analyzes the request and routes it to the appropriate specialist agent (`Fitness`, `Nutrition`, or `MentalCare`). Specialist agents utilize their unique instructions and dedicated plugins (like web scraping, database queries, or music search) to fulfill the request, returning the information to the `HealthManager` and then back to the user via the Chainlit UI.
+HealthMate employs a multi-agent architecture coordinated by Semantic Kernel. 
+
+The user interacts with the Chainlit UI, sending messages to the central `HealthManager` agent. The `HealthManager` analyzes the request and routes it to the appropriate specialist agent (`Fitness`, `Nutrition`, or `MentalCare`). 
+
+Specialist agents utilize their unique instructions and dedicated plugins (like web scraping, database queries, or music search) to fulfill the request, returning the information to the `HealthManager` and then back to the user via the Chainlit UI.
 
 <p align="center">
   <img src="./architecture.jpg" alt="HealthMate Architecture Diagram" width="80%"/>
