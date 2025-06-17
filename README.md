@@ -47,14 +47,15 @@ HealthMate employs a multi-agent architecture coordinated by Semantic Kernel.
 
 The user interacts with the Chainlit UI, sending messages to the central `HealthManager` agent. The `HealthManager` analyzes the request and routes it to the appropriate specialist agent (`Fitness`, `Nutrition`, or `MentalCare`). 
 
-Specialist agents utilize their unique instructions and dedicated plugins (like web scraping, database queries, or music search) to fulfill the request, returning the information to the `HealthManager` and then back to the user via the Chainlit UI.
+Specialist agents utilize their unique instructions and dedicated plugins (like web scraping, database queries, or music search) to fulfill the request, returning the information to the `HealthManager` and then back to the user.
+
 
 <p align="center">
   <img src="./architecture.jpg" alt="HealthMate Architecture Diagram" width="80%"/>
   <br/><em>Figure 1: HealthMate System Architecture</em>
 </p>
 
-[Find more on project deepwiki](https://deepwiki.com/realzjc/HealthMate)
+[Find more architecture info on project deepwiki](https://deepwiki.com/realzjc/HealthMate)
 
 **Core Components:**
 
