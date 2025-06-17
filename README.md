@@ -15,13 +15,13 @@ Whether you're looking to get fit, eat healthier, or manage stress, HealthMate a
 
 * **Multi-Agent Architecture:** 
     A central `HealthManager` intelligently routes your requests to specialized agents:
-    * 🏋️ **Fitness Agent:** Provides workout advice, exercise demonstrations (using real videos!), and helps create fitness plans.
+    * 🏋️ **Fitness Agent:** Provides workout advice, exercise demonstration videos, and helps create fitness plans.
     * 🍎 **Nutrition Agent:** Offers dietary guidance, finds healthy recipes based on your preferences (scraping from the web!), and breaks down nutritional info.
     * 🧠 **Mental Care Agent:** Supports emotional well-being, suggests calming music (from YouTube!), and provides guidance on stress management and sleep.
 * **Interactive UI:** 
-    Built with [Chainlit](https://chainlit.io/) for a seamless and engaging chat experience, including custom UI elements for recipes and exercise videos.
+    Built with Chainlit for a seamless and engaging chat experience, including custom UI elements for recipes and exercise videos.
 * **Personalization:** 
-    Remembers user profile details (age, gender, height, weight) using a local SQLite database via the `UserProfileQueryPlugin` to tailor advice.
+    Remembers user profile details (age, gender, height, weight) using a local SQLite database to tailor advice.
 * **External Tool Integration:** 
     Leverages Semantic Kernel plugins to:
     * Scrape websites for fitness videos (`FitnessPlugin` using Playwright).
