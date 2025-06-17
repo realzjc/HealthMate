@@ -13,20 +13,26 @@ Whether you're looking to get fit, eat healthier, or manage stress, HealthMate a
 
 ## ✨ Features
 
-* **Multi-Agent Architecture:** A central `HealthManager` intelligently routes your requests to specialized agents:
+* **Multi-Agent Architecture:** 
+    A central `HealthManager` intelligently routes your requests to specialized agents:
     * 🏋️ **Fitness Agent:** Provides workout advice, exercise demonstrations (using real videos!), and helps create fitness plans.
     * 🍎 **Nutrition Agent:** Offers dietary guidance, finds healthy recipes based on your preferences (scraping from the web!), and breaks down nutritional info.
     * 🧠 **Mental Care Agent:** Supports emotional well-being, suggests calming music (from YouTube!), and provides guidance on stress management and sleep.
-* **Interactive UI:** Built with [Chainlit](https://chainlit.io/) for a seamless and engaging chat experience, including custom UI elements for recipes and exercise videos.
-* **Personalization:** Remembers user profile details (age, gender, height, weight) using a local SQLite database via the `UserProfileQueryPlugin` to tailor advice (where applicable).
-* **External Tool Integration:** Leverages Semantic Kernel plugins to:
+* **Interactive UI:** 
+    Built with [Chainlit](https://chainlit.io/) for a seamless and engaging chat experience, including custom UI elements for recipes and exercise videos.
+* **Personalization:** 
+    Remembers user profile details (age, gender, height, weight) using a local SQLite database via the `UserProfileQueryPlugin` to tailor advice.
+* **External Tool Integration:** 
+    Leverages Semantic Kernel plugins to:
     * Scrape websites for fitness videos (`FitnessPlugin` using Playwright).
     * Search and extract recipes (`NutritionPlugin` using Playwright).
     * Find relevant music on YouTube (`MentalCarePlugin` using Pytube).
     * Send email summaries or confirmations (`SmtpPlugin` using Gmail).
     <!-- * *(Optional: Add ICS Calendar generation if implemented)* -->
-* **Azure Powered:** Utilizes Azure OpenAI (GPT-4o, GPT-4o-mini) and Azure AI Agents for robust AI capabilities and agent orchestration.
-* **RAG-Powered Responses:** Each agent is enhanced with **retrieval-augmented generation (RAG)** using the **Knowledge feature** in Azure AI Foundry's Agent Service — enabling more accurate, grounded, and domain-specific answers.
+* **Azure Powered:** 
+    Utilizes Azure OpenAI and Azure AI Agents for robust AI capabilities and agent orchestration.
+* **RAG-Powered Responses:** 
+    Each agent is enhanced with **retrieval-augmented generation (RAG)** using the **Knowledge feature** in Azure AI Foundry's Agent Service — enabling more accurate, grounded, and domain-specific answers.
 
 
 ---
@@ -46,8 +52,8 @@ HealthMate employs a multi-agent architecture coordinated by Semantic Kernel. Th
 
 * **Chainlit:** Provides the frontend chat interface and manages user sessions.
 * **Semantic Kernel:** Orchestrates the overall workflow, manages plugins, and interacts with AI models.
-* **Azure AI Agents:** Hosts the specialized agents (Fitness, Nutrition, MentalCare) defined with specific instructions and tools (plugins). Uses GPT-4o.
-* **Azure OpenAI Service:** Provides the underlying LLMs (GPT-4o-mini for the `HealthManager`).
+* **Azure AI Agents:** Hosts the specialized agents (Fitness, Nutrition, MentalCare) defined with specific instructions and tools (plugins). Uses GPT-4o-mini.
+* **Azure OpenAI Service:** Provides the underlying LLMs
 * **Plugins:** Modular components (`.py` files in `/plugins`) that give agents specific skills (web scraping, database access, API calls, etc.).
 
 ## 🛠️ Tech Stack
@@ -72,7 +78,9 @@ Let's get HealthMate running on your local machine!
 * **Azure Account & Services:**
     * An active Azure subscription.
     * An Azure OpenAI resource with eg. **GPT-4o-mini** deployed (for the `HealthManager`).
-    * An Azure AI Studio/Foundry project with three **Azure AI Agents** created using the eg. **GPT-4o** model (Fitness, Nutrition, MentalCare). Set agent prompts in `agents/*.py` files. Note the `Agent ID` for each. For each agent, upload the corresponding PDF from the `knowledge/` folder into the **Knowledge** section of Azure AI Studio to enable RAG-based responses:
+    * An Azure AI Studio/Foundry project with three **Azure AI Agents** created using the eg. **GPT-4o** model (Fitness, Nutrition, MentalCare). 
+
+    Set agent prompts in `agents/*.py` files. Note the `Agent ID` for each. For each agent, upload the corresponding PDF from the `knowledge/` folder into the **Knowledge** section of Azure AI Studio to enable RAG-based responses:
 
 | Agent            | Knowledge PDF File                                      | Description                                |
 |------------------|---------------------------------------------------------|--------------------------------------------|
