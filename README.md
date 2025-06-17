@@ -55,6 +55,11 @@ Specialist agents utilize their unique instructions and dedicated plugins (like 
   <br/><em>Figure 1: HealthMate System Architecture</em>
 </p>
 
+<p align="center">
+  <img src="./public/architecture-2.png" alt="HealthMate Architecture Diagram" width="80%"/>
+  <br/><em>Figure 2: HealthMate System Architecture</em>
+</p>
+
 [Find more architecture info on project deepwiki](https://deepwiki.com/realzjc/HealthMate)
 
 **Core Components:**
@@ -68,7 +73,7 @@ Specialist agents utilize their unique instructions and dedicated plugins (like 
 
 ## 🚀 Getting Started
 
-### 🛠️ Tech Stack
+### Tech Stack
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Semantic Kernel](https://img.shields.io/badge/Semantic%20Kernel-Microsoft-orange?style=for-the-badge)
