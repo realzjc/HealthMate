@@ -2,7 +2,7 @@
 <!-- 🚀 -->
 
 <p align="center">
-  <img src="./public/logo_light.png" alt="HealthMate Logo" width="150"/>
+  <img src="./public/white_background.png" alt="HealthMate Logo" width="150"/>
 </p>
 
 **HealthMate**: Your personal health assistant available 24/7, ready to guide you on fitness, nutrition, and mental well-being !!
